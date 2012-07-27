@@ -15,4 +15,4 @@
    along with IbusBogo.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "IBusBogo.hpp"
+#include "IBusBoGo.hpp"
