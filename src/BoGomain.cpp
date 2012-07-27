@@ -16,7 +16,7 @@
 */
 
 #include <ibus.h>
-#include "IBusBogo.hpp"
+#include "IBusBoGo.hpp"
 
 static IBusBus *bus = NULL;
 static IBusFactory *factory = NULL
