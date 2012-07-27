@@ -8,10 +8,10 @@ pkg_check_modules (GLIBMM glibmm-2.4)
 pkg_check_modules (IBUS ibus-1.0)
 
 #Include - headers
-include_directory (${GLIBMM_INCLUDE_DIRS})
-include_directory (${IBUS_INCLUDE_DIRS})
-include_directory (src)
-include_directory (BoGoEngine/src)
+include_directories (${GLIBMM_INCLUDE_DIRS})
+include_directories (${IBUS_INCLUDE_DIRS})
+include_directories (src)
+include_directories (BoGoEngine/src)
 
 #Linker - directories
 link_directories (${GLIMM_LIBRARY_DIRS})
