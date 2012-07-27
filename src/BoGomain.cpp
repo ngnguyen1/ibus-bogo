@@ -19,7 +19,7 @@
 #include "IBusBoGo.hpp"
 
 static IBusBus *bus = NULL;
-static IBusFactory *factory = NULL
+static IBusFactory *factory = NULL;
 
     /* command line options */
 static gboolean ibus = FALSE;
