@@ -45,7 +45,7 @@ static void init (void) {
 
     factory = ibus_factory_new (ibus_bus_get_connection (bus));
     g_object_ref_sink (factory);
-    ibus_factory_add_engine (factory, "bogo", IBUS_TYPE_ENCHANT_ENGINE);
+    ibus_factory_add_engine (factory, "bogo", IBUS_TYPE_BOGO_ENGINE);
 
     if (ibus) {
         ibus_bus_request_name (bus, "org.freedesktop.IBus.BoGo", 0);
@@ -68,7 +68,7 @@ static void init (void) {
                                                          "ko",
                                                          "GPLv3",
                                                          "Long T. Dam <longdt90@gmail.com",
-                                                         PKGDATADIR"/icons/ibus-enchant.svg",
+                                                         PKGDATADIR"/icons/ibus-bogo.svg",
                                                          "us"));
         ibus_bus_register_component (bus, component);
     }
