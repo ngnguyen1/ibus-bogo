@@ -16,8 +16,3 @@
 */
 
 #include "IBusBoGo.hpp"
-
-G_DEFINE_TYPE (IBusBogoEngine, ibus_bogo_engine, IBUS_TYPE_ENGINE);
-static void ibus_bogo_engine_class_init  (IBusBogoEngineClass *klass) {};
-static void ibus_bogo_engine_init (IBusBogoEngine *bogo) {};
-static void ibus_bogo_engine_destroy (IBusBogoEngine *bogo) {};
