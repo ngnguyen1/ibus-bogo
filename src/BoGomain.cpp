@@ -18,6 +18,8 @@
 #include <ibus.h>
 #include "IBusBoGo.hpp"
 
+#define PKGDATADIR "."
+
 static IBusBus *bus = NULL;
 static IBusFactory *factory = NULL;
 

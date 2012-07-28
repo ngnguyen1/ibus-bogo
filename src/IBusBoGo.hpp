@@ -17,15 +17,19 @@
 #ifndef __IBUSBOGO_HPP_
 #define __IBUSBOGO_HPP_
 
+#include <glibmm/ustring.h>
+#include <glib.h>
 #include <ibus.h>
 #include <engine.hpp>
 
+using namespace Glib;
 #define IBUS_TYPE_BOGO_ENGINE (ibus_bogo_engine_get_type())
 
 GType ibus_bogo_engine_get_type ();
 
 typedef struct _IBusBogoEngine IBusBogoEngine;
 typedef struct _IBusBogoEngineClass IBusBogoEngineClass;
+using namespace Glib;
 
 struct _IBusBogoEngine {
     IBusEngine parent;
@@ -45,5 +49,5 @@ static void ibus_bogo_engine_process_key_event (IBusEngine *engine,
                                                 guint modifiers);
 static void ibus_bogo_engine_commit_string (IBusBogoEngine *bogo,
                                             const gchar *string);
-static void ibus_bogo_engine_update (IbusBogoEngine *bogo);
+static void ibus_bogo_engine_update (IBusBogoEngine *bogo);
 #endif
