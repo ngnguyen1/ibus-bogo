@@ -67,7 +67,7 @@ static void init (void) {
                                    ibus_engine_desc_new ("bogo",
                                                          "BoGo",
                                                          "BoGo",
-                                                         "ko",
+                                                         "vi",
                                                          "GPLv3",
                                                          "Long T. Dam <longdt90@gmail.com",
                                                          PKGDATADIR"/icons/ibus-bogo.svg",

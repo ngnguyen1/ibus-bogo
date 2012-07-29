@@ -19,6 +19,17 @@
 
 G_DEFINE_TYPE (IBusBogoEngine, ibus_bogo_engine, IBUS_TYPE_ENGINE);
 
-static void ibus_bogo_engine_class_init  (IBusBogoEngineClass *klass) {};
-static void ibus_bogo_engine_init (IBusBogoEngine *bogo) {};
+static void ibus_bogo_engine_class_init  (IBusBogoEngineClass *klass) {
+    IBusObjectClass * ibus_object_class = IBUS_OBJECT_CLASS (klass);
+    IBusEngineClass * engine_class = IBUS_ENGINE_CLASS (klass);
+
+    ibus_object_class -> destroy = 
+        (IBusObjectDestroyFunc) ibus_bogo_engine_destroy;
+
+    engine_class -> process_key_event = ibus_bogo_engine_process_key_event;
+
+};
+static void ibus_bogo_engine_init (IBusBogoEngine *bogo) {
+    
+};
 static void ibus_bogo_engine_destroy (IBusBogoEngine *bogo) {};
