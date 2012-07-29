@@ -14,6 +14,40 @@
    You should have received a copy of the GNU General Public License
    along with IbusBogo.  If not, see <http://www.gnu.org/licenses/>.
 */
+#ifndef __IBUSBOGO_HPP_
+#define __IBUSBOGO_HPP_
 
+#include <glibmm/ustring.h>
+#include <glib.h>
+#include <ibus.h>
 #include <engine.hpp>
 
+using namespace Glib;
+#define IBUS_TYPE_BOGO_ENGINE (ibus_bogo_engine_get_type())
+
+GType ibus_bogo_engine_get_type ();
+
+typedef struct _IBusBogoEngine IBusBogoEngine;
+typedef struct _IBusBogoEngineClass IBusBogoEngineClass;
+using namespace Glib;
+
+struct _IBusBogoEngine {
+    IBusEngine parent;
+    ustring preedit;
+};
+
+struct _IBusBogoEngineClass {
+    IBusEngineClass parrent;
+};
+
+static void ibus_bogo_engine_class_init  (IBusBogoEngineClass *klass);
+static void ibus_bogo_engine_init (IBusBogoEngine *bogo);
+static void ibus_bogo_engine_destroy (IBusBogoEngine *bogo);
+static void ibus_bogo_engine_process_key_event (IBusEngine *engine,
+                                                guint keyval,
+                                                guint keycode,
+                                                guint modifiers);
+static void ibus_bogo_engine_commit_string (IBusBogoEngine *bogo,
+                                            const gchar *string);
+static void ibus_bogo_engine_update (IBusBogoEngine *bogo);
+#endif
