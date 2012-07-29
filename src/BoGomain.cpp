@@ -81,14 +81,15 @@ int main(int argc, char **argv) {
     GOptionContext *context;
 
     /* Parse the command line */
-    context = g_option_context_new ("- ibus template engine");
+    /* Don't need this code? */
+    /* context = g_option_context_new ("- ibus template engine");
     g_option_context_add_main_entries (context, entries, "ibus-tmpl");
 
     if (!g_option_context_parse (context, &argc, &argv, &error)) {
       g_print ("Option parsing failed: %s\n", error->message);
       g_error_free (error);
       return (-1);
-    }
+      } */
 
     /* Go */
     init ();
